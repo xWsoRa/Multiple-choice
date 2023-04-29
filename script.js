@@ -11,7 +11,7 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-let count = 41;
+let count = 61;
 let countdown;
 
 //Questions and Options array
@@ -50,7 +50,7 @@ const quizArray = [
     {
         id: "5",
         question: "Which option includes an example of a problem with the general meaning hypothesis?",
-        options: ["Failure to distinguish the word from various non-synonymous verbs in the same semantic field.", "Failure to provide clear definitions, which instead might either be too wordy and specific or too simple and general", "The hyper specific entries might confuse the user unnecessarily, and also might be ambiguous", "All of them are correct"],
+        options: ["Failure to distinguish the word from various non-synonymous verbs in the same semantic field.", "Failure to provide a clear definition and instead adding too many definitions which can be confusing.", "Failure to distinguish the word from various synonymous verbs in the same semantic field", "All of them are correct"],
         correct: "Failure to distinguish the word from various non-synonymous verbs in the same semantic field.",
     }, {
         id: "6",
@@ -105,7 +105,7 @@ nextBtn.addEventListener(
                 questionCount + 1 + " of " + quizArray.length + " Question";
             //display quiz
             quizDisplay(questionCount);
-            count = 41;
+            count = 61;
             clearInterval(countdown);
             timerDisplay();
         }
@@ -198,7 +198,7 @@ function initial() {
     quizContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
-    count = 41;
+    count = 61;
     clearInterval(countdown);
     timerDisplay();
     quizCreator();
